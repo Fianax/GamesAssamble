@@ -3,6 +3,7 @@ package com.example.gamesassamble;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -41,6 +42,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //metodo para ir al repositorio de git
+    public void gitHub(View view){
+        String url="https://github.com/Fianax/GamesAssamble";
+        Uri uri=Uri.parse(url);
+        Intent i=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(i);
+    }
+
+    //metodo para enlazar la pagina de google play
+    public void googlePlay(View view){
+        String url="http://play.google.com/store/apps/details?id=com.google.android.apps.maps";
+        Uri uri=Uri.parse(url);
+        Intent i=new Intent(Intent.ACTION_VIEW,uri);
+        startActivity(i);
+    }
 
 
     //mostrar un toast con la informacion del creador del modulo

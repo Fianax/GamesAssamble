@@ -28,6 +28,7 @@
         android:layout_height="54dp"
         android:background="@drawable/ic_new"
         android:gravity="center"
+        android:onClick="nuevaPartida"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"

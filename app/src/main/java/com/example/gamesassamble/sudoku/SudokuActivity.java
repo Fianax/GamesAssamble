@@ -1,6 +1,10 @@
 package com.example.gamesassamble.sudoku;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -22,9 +26,11 @@ public class SudokuActivity extends AppCompatActivity {
     public TextView[] numeros;
     public TextView aux;
     public String[][] sudoku;
+    public AlertDialog.Builder alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        alert = new AlertDialog.Builder(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sudoku);
         datoSelecionado="0";
@@ -39,6 +45,12 @@ public class SudokuActivity extends AppCompatActivity {
 
         //le damos los valores del sudoku creado
         setTablero(sudoku);
+        for(int i=0;i<sudoku.length;i++){
+            System.out.println();
+            for(int j=0;j<sudoku[i].length;j++){
+                System.out.print(sudoku[i][j]+"-");
+            }
+        }
     }
 
 
@@ -52,8 +64,9 @@ public class SudokuActivity extends AppCompatActivity {
         do{
             j=0;
             do {
-                if(!tablero[i][j].getText().equals(sudoku[i][j]))
-                    resuelto=false;
+                if(!tablero[i][j].getText().equals(sudoku[i][j])) {
+                    resuelto = false;
+                }
                 j++;
             }while(j<9 && resuelto);
             i++;
@@ -61,7 +74,11 @@ public class SudokuActivity extends AppCompatActivity {
 
         if(resuelto){
             //lo que haya que hacer
-        }
+            MediaPlayer mediaPlayer= MediaPlayer.create(this, R.raw.ganador);
+            mediaPlayer.start();
+            Toast.makeText(this, "Completado. Pulsa NEW para una nueva partida", Toast.LENGTH_SHORT).show();
+        }else
+            Toast.makeText(this, "Solucion no valida!!!", Toast.LENGTH_SHORT).show();
     }
 
     //metodo para borrarTodo
@@ -122,17 +139,12 @@ public class SudokuActivity extends AppCompatActivity {
 
     //metodo para darle los valores al tablero referenciado
     public void setTablero(String[][] sudoku){
-        //Lo rellena entero
-        /*for (int i=0;i<tablero.length;i++)
-            for(int j=0;j<tablero[i].length;j++)
-                tablero[i][j].setText(sudoku[i][j]);*/
-
         //Rellena 20-24 casillas en funcion del sudoku creado
         int i,j,a;
         Random random=new Random();
         boolean salir;
 
-        a=random.nextInt(31-25+1)+27;//entre 25-29
+        a=25+random.nextInt((31+1)-25);//entre 25-31
         for(int b=0;b<a;b++){
             salir=false;
             do{
@@ -152,9 +164,9 @@ public class SudokuActivity extends AppCompatActivity {
     public void atrasInstantanea(View view){
         Toast.makeText(this, String.valueOf(atras.size()), Toast.LENGTH_SHORT).show();
         aux.setTypeface(Typeface.DEFAULT);
-        if(atras.size()>1){
-            volverPasado(atras.get(atras.size()-2));
-            atras.remove(atras.size()-2);
+        if(atras.size()>0){
+            volverPasado(atras.get(atras.size()-1));
+            atras.remove(atras.size()-1);
         }else{
             atras.clear();//para limpiarla de datos residuales, el ultimo en concreto
         }
@@ -165,6 +177,11 @@ public class SudokuActivity extends AppCompatActivity {
         for(int i=0;i<tablero.length;i++)
             for(int j=0;j<tablero[i].length;j++)
                 tablero[i][j].setText(ins[i][j]);
+    }
+
+    public void nuevaPartida(View view){
+        Toast.makeText(this, "Generando nuevo sudoku...", Toast.LENGTH_SHORT).show();
+        this.recreate();
     }
 
     //metodo para darle el valor selecionado a la ficha del tablero
@@ -699,6 +716,32 @@ public class SudokuActivity extends AppCompatActivity {
         this.numeros[6]=findViewById(R.id.tv_7);
         this.numeros[7]=findViewById(R.id.tv_8);
         this.numeros[8]=findViewById(R.id.tv_9);
+    }
+
+    //para controlar el boton back
+    @Override
+    public void onBackPressed() {
+        crearAlert();
+    }
+
+    public void crearAlert(){
+        alert.setMessage("¿Deseas abandonar?");
+        alert.setTitle("Salir");
+        alert.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        alert.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //no hacemos nada
+            }
+        });
+
+        AlertDialog dialog= alert.create();
+        dialog.show();
     }
 
     //Para obtener toda la pantalla

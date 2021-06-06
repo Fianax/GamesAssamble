@@ -148,6 +148,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/github"
+        android:onClick="gitHub"
         app:layout_constraintBottom_toBottomOf="@+id/tv_about"
         app:layout_constraintEnd_toEndOf="@+id/tv_about" />
 
@@ -158,6 +159,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/google_play"
+        android:onClick="googlePlay"
         app:layout_constraintBottom_toBottomOf="@+id/tv_about"
         app:layout_constraintStart_toStartOf="@+id/tv_about" />
 
