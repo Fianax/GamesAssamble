@@ -11,4 +11,22 @@
     <string name="siete">7</string>
     <string name="ocho">8</string>
     <string name="nueve">9</string>
+
+    <!--traduccion-->
+    <string name="sudoku_name">SUDOKU</string>
+    <string name="btn_play">Jugar</string>
+    <string name="sopa_name">SOPA DE LETRAS</string>
+    <string name="sobre">Sobre nosotros</string>
+
+    <string name="creador">Creador: Fianax</string>
+
+    <string name="completado">Completado. Pulsa NEW para una nueva partida</string>
+    <string name="fallo">Solucion no valida!!!</string>
+    <string name="sudoku_generando">Generando nuevo sudoku...</string>
+    <string name="alert_msg">¿Deseas abandonar?</string>
+    <string name="alert_titulo">Salir</string>
+    <string name="alert_ok">Aceptar</string>
+    <string name="alert_cancelar">Cancelar</string>
+
+    <string name="sopa_generando">Generando nueva sopa...</string>
 </resources>

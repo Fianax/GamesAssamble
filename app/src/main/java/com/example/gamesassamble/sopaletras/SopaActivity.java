@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Random;
 
 import com.example.gamesassamble.R;
@@ -81,11 +82,15 @@ public class SopaActivity extends AppCompatActivity {
         int pos=0,i=0;
         ArrayList<Integer> repetidas=new ArrayList<Integer>();
         Random r=new Random();
+        InputStream in = null;
         try {
             //vamos a ir añadiendo las palabras
             //2 de 6 (101-145)
             while(i<2){
-                InputStream in=getResources().openRawResource(R.raw.spanish);
+                if(Locale.getDefault().getLanguage().equals("es"))
+                    in=getResources().openRawResource(R.raw.spanish);
+                else
+                    in=getResources().openRawResource(R.raw.english);
                 BufferedReader reader=new BufferedReader(new InputStreamReader(in));
                 pos=101+r.nextInt((145+1)-101);
                 if(!repetidas.contains(pos)) {
@@ -101,7 +106,10 @@ public class SopaActivity extends AppCompatActivity {
             //2 de 5 (52-100)
             i=0;
             while(i<2){
-                InputStream in=getResources().openRawResource(R.raw.spanish);
+                if(Locale.getDefault().getLanguage().equals("es"))
+                    in=getResources().openRawResource(R.raw.spanish);
+                else
+                    in=getResources().openRawResource(R.raw.english);
                 BufferedReader reader=new BufferedReader(new InputStreamReader(in));
                 pos=52+r.nextInt((100+1)-52);
                 if(!repetidas.contains(pos)) {
@@ -117,7 +125,10 @@ public class SopaActivity extends AppCompatActivity {
             //3 de 4 (24-51)
             i=0;
             while(i<3){
-                InputStream in=getResources().openRawResource(R.raw.spanish);
+                if(Locale.getDefault().getLanguage().equals("es"))
+                    in=getResources().openRawResource(R.raw.spanish);
+                else
+                    in=getResources().openRawResource(R.raw.english);
                 BufferedReader reader=new BufferedReader(new InputStreamReader(in));
                 pos=24+r.nextInt((51+1)-24);
                 if(!repetidas.contains(pos)) {
@@ -133,7 +144,10 @@ public class SopaActivity extends AppCompatActivity {
             //2 de 3 (1-23)
             i=0;
             while(i<2){
-                InputStream in=getResources().openRawResource(R.raw.spanish);
+                if(Locale.getDefault().getLanguage().equals("es"))
+                    in=getResources().openRawResource(R.raw.spanish);
+                else
+                    in=getResources().openRawResource(R.raw.english);
                 BufferedReader reader=new BufferedReader(new InputStreamReader(in));
                 pos=1+r.nextInt((23+1)-1);
                 if(!repetidas.contains(pos)) {
@@ -281,7 +295,7 @@ public class SopaActivity extends AppCompatActivity {
     //para combrobar si has ganado
     public void isGanado(){
         if(palabras.size()==0){
-            Toast.makeText(this, "Generando nueva sopa...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.sopa_generando), Toast.LENGTH_SHORT).show();
             musica(1);
             recreate();
             new CountDownTimer(5000,1000){//generamos un contador de espera, por si tardara en crearse
@@ -300,7 +314,7 @@ public class SopaActivity extends AppCompatActivity {
     }
 
     public void nuevaPartida(View view){
-        Toast.makeText(this, "Generando nueva sopa...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.sopa_generando), Toast.LENGTH_SHORT).show();
         this.recreate();
     }
 
@@ -314,15 +328,15 @@ public class SopaActivity extends AppCompatActivity {
     }
 
     public void crearAlert(){
-        alert.setMessage("¿Deseas abandonar?");
-        alert.setTitle("Salir");
-        alert.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+        alert.setMessage(getResources().getString(R.string.alert_msg));
+        alert.setTitle(getResources().getString(R.string.alert_titulo));
+        alert.setPositiveButton(getResources().getString(R.string.alert_ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
         });
-        alert.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+        alert.setNegativeButton(getResources().getString(R.string.alert_cancelar), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //no hacemos nada

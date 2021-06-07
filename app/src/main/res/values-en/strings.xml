@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GamesAssamble</string>
+
+    <!--Nombre numeros para dar valor-->
+    <string name="uno">1</string>
+    <string name="dos">2</string>
+    <string name="tres">3</string>
+    <string name="cuatro">4</string>
+    <string name="cinco">5</string>
+    <string name="seis">6</string>
+    <string name="siete">7</string>
+    <string name="ocho">8</string>
+    <string name="nueve">9</string>
+
+    <!--traduccion-->
+    <string name="sudoku_name">SUDOKU</string>
+    <string name="btn_play">Play</string>
+    <string name="sopa_name">ALPHABET SOUP</string>
+    <string name="sobre">About us</string>
+
+    <string name="creador">Autor: Fianax</string>
+
+    <string name="completado">Completed. Press NEW for a new game</string>
+    <string name="fallo">Solution not valid !!!</string>
+    <string name="sudoku_generando">Generating new sudoku ...</string>
+    <string name="alert_msg">Do you want to leave?</string>
+    <string name="alert_titulo">Get out</string>
+    <string name="alert_ok">Accept</string>
+    <string name="alert_cancelar">Cancel</string>
+
+    <string name="sopa_generando">Generating new alphabet soup...</string>
+</resources>

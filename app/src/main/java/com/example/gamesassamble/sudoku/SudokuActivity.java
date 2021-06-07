@@ -76,9 +76,9 @@ public class SudokuActivity extends AppCompatActivity {
             //lo que haya que hacer
             MediaPlayer mediaPlayer= MediaPlayer.create(this, R.raw.ganador);
             mediaPlayer.start();
-            Toast.makeText(this, "Completado. Pulsa NEW para una nueva partida", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.completado), Toast.LENGTH_SHORT).show();
         }else
-            Toast.makeText(this, "Solucion no valida!!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.fallo), Toast.LENGTH_SHORT).show();
     }
 
     //metodo para borrarTodo
@@ -180,7 +180,7 @@ public class SudokuActivity extends AppCompatActivity {
     }
 
     public void nuevaPartida(View view){
-        Toast.makeText(this, "Generando nuevo sudoku...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.sudoku_generando), Toast.LENGTH_SHORT).show();
         this.recreate();
     }
 
@@ -725,15 +725,15 @@ public class SudokuActivity extends AppCompatActivity {
     }
 
     public void crearAlert(){
-        alert.setMessage("¿Deseas abandonar?");
-        alert.setTitle("Salir");
-        alert.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+        alert.setMessage(getResources().getString(R.string.alert_msg));
+        alert.setTitle(getResources().getString(R.string.alert_titulo));
+        alert.setPositiveButton(getResources().getString(R.string.alert_ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
             }
         });
-        alert.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+        alert.setNegativeButton(getResources().getString(R.string.alert_cancelar), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //no hacemos nada

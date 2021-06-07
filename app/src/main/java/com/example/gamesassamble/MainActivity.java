@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     //mostrar un toast con la informacion del creador del modulo
     public void infoCreador(View view){
-        Toast.makeText(this, "Creador: FIANAX", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getResources().getString(R.string.creador), Toast.LENGTH_SHORT).show();
     }
 
 
