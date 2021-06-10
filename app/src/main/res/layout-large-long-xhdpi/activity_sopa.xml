@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/tv_sopaatras"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
 
         android:background="@drawable/ic_back"
         android:gravity="center"
@@ -20,15 +20,16 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.055" />
 
+    <!--para que no salga la animacion al tocar un elemento (listSelector:#transparent)-->
     <TextView
         android:id="@+id/tv_sopanuevo"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
 
         android:background="@drawable/ic_new"
         android:gravity="center"
@@ -38,32 +39,33 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <LinearLayout
         android:id="@+id/ll_sopa"
-        android:layout_width="378dp"
-        android:layout_height="378dp"
+        android:layout_width="770dp"
+        android:layout_height="770dp"
         android:background="@drawable/borde_redondeado_etiqueta"
         android:backgroundTint="#FFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9">
+        app:layout_constraintVertical_bias="0.944">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp">
+            android:layout_height="110dp">
 
             <TextView
                 android:id="@+id/tv_sopa_00"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -73,8 +75,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_01"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -84,8 +86,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_02"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -95,8 +97,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_03"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -106,8 +108,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_04"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -116,8 +118,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_05"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -127,8 +129,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_06"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -139,13 +141,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_10"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -155,8 +157,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_11"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -166,8 +168,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_12"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -177,8 +179,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_13"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -188,8 +190,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_14"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -198,8 +200,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_15"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -209,8 +211,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_16"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -221,13 +223,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_20"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -237,8 +239,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_21"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -248,8 +250,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_22"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -259,8 +261,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_23"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -270,8 +272,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_24"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -280,8 +282,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_25"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -291,8 +293,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_26"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -303,13 +305,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_30"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -319,8 +321,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_31"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -330,8 +332,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_32"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -341,8 +343,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_33"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -352,8 +354,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_34"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -362,8 +364,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_35"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -373,8 +375,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_36"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -385,13 +387,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_40"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -401,8 +403,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_41"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -412,8 +414,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_42"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -423,8 +425,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_43"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -434,8 +436,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_44"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -444,8 +446,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_45"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -455,8 +457,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_46"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -467,13 +469,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_50"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -483,8 +485,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_51"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -494,8 +496,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_52"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -505,8 +507,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_53"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -516,8 +518,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_54"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -526,8 +528,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_55"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -537,8 +539,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_56"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -549,13 +551,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="110dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_sopa_60"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -565,8 +567,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_61"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -576,8 +578,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_62"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -587,8 +589,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_63"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -598,8 +600,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_64"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -608,8 +610,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_65"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
 
                 android:gravity="center"
@@ -619,8 +621,8 @@
 
             <TextView
                 android:id="@+id/tv_sopa_66"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:onClick="marcar"
@@ -632,11 +634,10 @@
 
     </LinearLayout>
 
-    <!--para que no salga la animacion al tocar un elemento (listSelector:#transparent)-->
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="378dp"
-        android:layout_height="185dp"
+        android:layout_width="716dp"
+        android:layout_height="477dp"
 
         android:background="#FBF7DF"
         android:gravity="center"
@@ -644,8 +645,8 @@
         android:numColumns="3"
         app:layout_constraintBottom_toTopOf="@+id/ll_sopa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.842" />
 </androidx.constraintlayout.widget.ConstraintLayout>

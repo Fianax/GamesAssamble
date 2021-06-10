@@ -2,7 +2,6 @@ package com.example.gamesassamble.sudoku;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -162,8 +161,8 @@ public class SudokuActivity extends AppCompatActivity {
 
     //metodo atras para volver a un movimiento anterior
     public void atrasInstantanea(View view){
-        Toast.makeText(this, String.valueOf(atras.size()), Toast.LENGTH_SHORT).show();
-        aux.setTypeface(Typeface.DEFAULT);
+        //Toast.makeText(this, String.valueOf(atras.size()), Toast.LENGTH_SHORT).show();
+        //aux.setTypeface(Typeface.DEFAULT);
         if(atras.size()>0){
             volverPasado(atras.get(atras.size()-1));
             atras.remove(atras.size()-1);

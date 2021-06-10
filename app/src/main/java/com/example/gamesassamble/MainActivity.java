@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     //metodo para enlazar la pagina de google play
     public void googlePlay(View view){
-        String url="http://play.google.com/store/apps/details?id=com.google.android.apps.maps";
+        String url="https://play.google.com/store/apps/developer?id=Dpto.+Inform%C3%A1tica-IES+Murgi";
         Uri uri=Uri.parse(url);
         Intent i=new Intent(Intent.ACTION_VIEW,uri);
         startActivity(i);

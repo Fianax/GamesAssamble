@@ -161,7 +161,7 @@ public class SopaLetra {
                     if (palabra_ok) {
                         salir_orientacion = true;
                         salir_global = true;
-                    } else if (topeMax >= 5) {
+                    } else if (topeMax >= 2) {
                         salir_orientacion = true;
                         salir_global = false;
                         topeMax = 0;//para refrescar la primera posicion

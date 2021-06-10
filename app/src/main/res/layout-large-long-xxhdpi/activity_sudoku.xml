@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tablero">
+
+    <TextView
+        android:id="@+id/tv_sudokuverificar"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:background="@drawable/ic_verificar"
+        android:gravity="center"
+        android:onClick="comprobar"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/tv_sudokunuevo"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:background="@drawable/ic_new"
+        android:gravity="center"
+        android:onClick="nuevaPartida"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/tv_sudoku_borrarall"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/borrar_all"
+        android:gravity="center"
+        android:onClick="borrarTodo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/tv_sudokuatras"
+        android:layout_width="176dp"
+        android:layout_height="176dp"
+        android:background="@drawable/ic_retroceder"
+        android:gravity="center"
+        android:onClick="atrasInstantanea"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/tv_sudokuborrar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/borrar"
+        android:gravity="center"
+        android:onClick="borarUno"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/tv_9"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/nueve"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/tv_8"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/ocho"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/siete"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/seis"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/cinco"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/cuatro"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/tres"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/dos"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/borde_redondeado_etiqueta_sudoku"
+        android:gravity="center"
+        android:onClick="getValue"
+        android:text="@string/uno"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="900dp"
+        android:layout_height="900dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:id="@+id/tv_11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_13"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_14"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_15"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_16"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_17"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_18"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_19"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_21"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_22"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_23"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_24"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_25"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_26"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_27"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_28"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_29"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_31"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_32"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_33"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_34"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_izquiera_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_35"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_abajo_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_36"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_37"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_izquierda_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_38"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_39"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_41"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_42"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_43"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_44"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_45"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_46"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_47"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_48"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_49"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_51"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_52"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_53"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_54"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_55"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_56"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_57"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_58"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_59"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_claro"
+
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_61"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_izquiera_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_62"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_63"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_64"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_65"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_66"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_67"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_abajo_izquiera_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_68"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_69"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_71"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_72"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_73"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_74"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_75"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_76"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_77"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_arriba_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_78"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_79"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_arriba_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_81"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_82"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_83"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_84"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_85"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_86"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_87"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_izquierda_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_88"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_89"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_91"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_izquierda_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_92"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_93"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_94"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_izquiera_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_95"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_abajo_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_96"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_derecha_claro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_97"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/sudoku_izquierda_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_98"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_99"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/sudoku_derecha_abajo_oscuro"
+                android:gravity="center"
+                android:onClick="setValue"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
