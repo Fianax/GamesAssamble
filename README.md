@@ -1,5 +1,5 @@
 # GamesAssamble
-Se trata de un proyecto de fin de ciclo superior pero con posibilidad de expansirse y convertirse en un Launcher
+Se trata de un proyecto de fin de ciclo superior pero con posibilidad de expandirse y convertirse en un Launcher
 para programadores jovenes o incluso experimentados que quieran desarrollar un pequeño juego y quieran practicar
 con el lenguaje Java.
 
